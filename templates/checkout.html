@@ -96,7 +96,7 @@
 
         function returnToShopping() {
            params = window.location.href.split('?')[1];
-           document.location = getParameterByName('version') + '.html?' + params;
+           window.location.href = '/?' + params;
         }
 
         function sendData(timeLoaded, clickTime, clickObjectID, cook){
