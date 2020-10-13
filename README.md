@@ -27,17 +27,20 @@ Keep this in mind when making your changes!
 
 ## Steps
 1. Modify Version A and B of the website by editing the `A.html` and `B.html` files found in the `/templates` folder. Your changes do not have to be drastic, but think about how they will affect the above metrics. *Feel free to change the items from cacti to something else, but you must keep the ids the same.*
-2. Deploy it on heroku following our [deployment guide](https://docs.google.com/document/d/10gUVRN74JkL6Iqw3w_XEPcAaQkZFqlXYTRX-XFk51yk/edit). Ignore the cs1300 template - you'll be deploying this git repo.
-3. Verify that navigating to your URL will open version A 50% of the time, and version B the other 50%. Click around and check if the cart page is working.
-4. Check if the logs are working properly. From the 1300ABTesting folder, run the following command to extract the logs into a text file `mylog.txt`.  
-Mac: ```heroku logs --app=<your-app-name> -n 1500 > mylog.txt```  
-Windows: ```heroku logs --app=<your-app-name> -n 1500 | Out-File mylog.txt```  
+2. You can open the html files to check your changes, but since this is a flask app, the page naviagation will only work if you run the app locally using the following commands from your 1300ABTesting folder:  
+`export FLASK_APP=app.py`  
+`flask run`  
+3. Deploy it on heroku following our [deployment guide](https://docs.google.com/document/d/10gUVRN74JkL6Iqw3w_XEPcAaQkZFqlXYTRX-XFk51yk/edit). Ignore the cs1300 template - you'll be deploying this git repo.
+4. Verify that navigating to your URL will open version A 50% of the time, and version B the other 50%. Click around and check if the cart page is working.
+5. Check if the logs are working properly. From the 1300ABTesting folder, run the following command to extract the logs into a text file `mylog.txt`.  
+Mac: `heroku logs --app=<your-app-name> -n 1500 > mylog.txt`  
+Windows: `heroku logs --app=<your-app-name> -n 1500 | Out-File mylog.txt`  
 After you hit enter, you’ll see a blank line at the bottom of your terminal, which means that the command is running.
 Once the command has finished, if you look at the created text file (`mylog.txt` in the above example), there’s a lot of information we don’t need. To get just the lines of data that we want for this project, run:  
 Mac: `grep AB_TEST mylog.txt > myfilteredlog.txt`  
 Windows: `Get-Content mylog.txt | Select-String -Pattern "AB_TEST" | Out-File myfilteredlog.txt`  
 Open `myfilteredlog.txt` and verify that you have logs. They should look something like the sample output included below.  
-5. __IMPORTANT:__ Fill out [this form](https://forms.gle/nc6TnRaZevUAQtzT9) with your deployed URL. 
+6. __IMPORTANT:__ Fill out [this form](https://forms.gle/nc6TnRaZevUAQtzT9) with your deployed URL. 
 
 
 ## Important Notes
