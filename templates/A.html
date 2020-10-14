@@ -66,46 +66,58 @@
 
     <!-- If you add any new buttons, you need to update the javascript file, for
     corresponding button id, so that clicks of that button could be logged -->
-    <div class="content-pane">
-      <div class="vendor-wrapper" id="mp1">
-        <img src="../static/coppercombo.png" class="vendor-photo" />
-        <button class="vendor-book-button btn btn-red" type="submit" id="mp1">
-          Add To Cart
-        </button>
-        <span><span id="mp1-added">0</span> in cart</span>
-        <p>Stunning succulent combo, featuring 3 adolescent cacti in
-          industrial copper pots. <i>$9.99</i>
-        </p>
+    <div class="a-content-pane">
+      <div class="a-vendor-row">
+        <div class="a-vendor-wrapper" id="mp1">
+          <img src="../static/coppercombo.png" class="vendor-photo" />
+          <div class="a-vendor-cart">
+            <button class="a-vendor-book-button btn a-btn" type="submit" id="mp1">
+              Add To Cart
+            </button>
+            <span><span id="mp1-added">0</span> in cart</span>
+          </div>
+          <p>Stunning succulent combo, featuring 3 adolescent cacti in
+            industrial copper pots. <i>$9.99</i>
+          </p>
+        </div>
+
+        <div class="a-vendor-wrapper" id="mp2">
+          <img src="../static/geoprickly.jpg" class="vendor-photo" />
+          <div class="a-vendor-cart">
+            <button class="a-vendor-book-button btn a-btn" type="submit" id="mp2">
+              Add To Cart
+            </button>
+            <span><span id="mp2-added">0</span> in cart</span>
+          </div>
+          <p>Beautiful prickly pair in modern geometric pots. <i>$14.99</i>
+          </p>
+        </div>
       </div>
 
-      <div class="vendor-wrapper" id="mp2">
-        <img src="../static/geoprickly.jpg" class="vendor-photo" />
-        <button class="vendor-book-button btn btn-red" type="submit" id="mp2">
-          Add To Cart
-        </button>
-        <span><span id="mp2-added">0</span> in cart</span>
-        <p>Beautiful prickly pair in modern geometric pots. <i>$14.99</i>
-        </p>
-      </div>
+      <div class="a-vendor-row">
+        <div class="a-vendor-wrapper" id="mp3">
+          <img src="../static/garden.jpg" class="vendor-photo" />
+          <div class="a-vendor-cart">
+            <button class="a-vendor-book-button btn a-btn" type="submit" id="mp3">
+              Add To Cart
+            </button>
+            <span><span id="mp3-added">0</span> in cart</span>
+          </div>
+          <p>Cacti and succulent mini-garden in a congenial and rustic pot. <i>$25.99</i>
+          </p>
+        </div>
 
-      <div class="vendor-wrapper" id="mp3">
-        <img src="../static/garden.jpg" class="vendor-photo" />
-        <button class="vendor-book-button btn btn-red" type="submit" id="mp3">
-          Add To Cart
-        </button>
-        <span><span id="mp3-added">0</span> in cart</span>
-        <p>Cacti and succulent mini-garden in a congenial and rustic pot. <i>$25.99</i>
-        </p>
-      </div>
-
-      <div class="vendor-wrapper" id="mp4">
-        <img src="../static/garden-combo.jpg" class="vendor-photo" />
-        <button class="vendor-book-button btn btn-red" type="submit" id="mp4">
-          Add To Cart
-        </button>
-        <span><span id="mp4-added">0</span> in cart</span>
-        <p>Cacti, succulent, and garden combo in handcrafted pots. <i>$34.99</i>
-        </p>
+        <div class="a-vendor-wrapper" id="mp4">
+          <img src="../static/garden-combo.jpg" class="vendor-photo" />
+          <div class="a-vendor-cart">
+            <button class="a-vendor-book-button btn a-btn" type="submit" id="mp4">
+              Add To Cart
+            </button>
+            <span><span id="mp4-added">0</span> in cart</span>
+          </div>
+          <p>Cacti, succulent, and garden combo in handcrafted pots. <i>$34.99</i>
+          </p>
+        </div>
       </div>
 
       <div id="cart-wrapper">
@@ -184,7 +196,7 @@
         function navigateToCheckout() {
           // Send number of items in cart to checkout page through URL params.
           params = 'version=A';
-          Array.from(document.getElementsByClassName('vendor-wrapper')).forEach(el => {
+          Array.from(document.getElementsByClassName('a-vendor-wrapper')).forEach(el => {
             numInCart = parseInt(document.getElementById(el.id + '-added').textContent, 0);
             params += ('&' + el.id + '=' + numInCart)
           })

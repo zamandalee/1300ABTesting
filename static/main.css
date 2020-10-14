@@ -1,4 +1,4 @@
-/* Feel free to modify anything in this file.*/
+/* Body */
 html body {
 	background-color: #ecedd5;
 }
@@ -6,6 +6,7 @@ html body {
   background-color: #fff;
 }
 
+/* Header */
 header {
 	padding-left: 40px;
 	padding-top: 20px;
@@ -35,26 +36,58 @@ header {
   padding-top: 70px;
   color: black;
 }
+
+/* Content */
+.content-pane {
+  padding: 40px;
+}
+.a-content-pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+/* .a-vendor-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* Vendor Items */
+.a-vendor-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;;
+}
 .vendor-wrapper {
 	justify-content: left;
 	padding-left: 40px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-
 .vendor-photo {
 	max-width: 200px;
 	max-height: 150px;
 	padding-right: 20px;
 }
-
+.a-vendor-wrapper img {
+  padding: 0 0 15px 0;
+}
+.a-vendor-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .vendor-book-button {
 	font-size: 2em;
 }
-
-.content-pane {
-  padding: 40px;
+.a-vendor-book-button {
+  margin-right: 10px;
+	font-size: 2em;
 }
+
 
 .fa-stack[data-count]:after{
   position: absolute;
@@ -80,7 +113,7 @@ header {
 .red-cart {
 	color: #DF0000;
 }
-.btn-red {
-  background: red;
+.a-btn {
+  background: #288d19;
   color: #fff;
 }
