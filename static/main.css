@@ -2,12 +2,39 @@
 html body {
 	background-color: #ecedd5;
 }
+.a-body {
+  background-color: #fff;
+}
 
 header {
 	padding-left: 40px;
 	padding-top: 20px;
 }
-
+.a-hero {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  padding: 0;
+  text-align: center;
+  opacity: 100%;
+}
+.a-hero-bg {
+  background: url('./hero.jpg') top center;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  content: "";
+  opacity: 0.4;
+  z-index: -1;
+}
+.a-hero-content {
+  z-index: 9999;
+  padding-top: 70px;
+  color: black;
+}
 .vendor-wrapper {
 	justify-content: left;
 	padding-left: 40px;
